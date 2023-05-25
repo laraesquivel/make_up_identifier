@@ -5,7 +5,7 @@ from random import randint
 import sys
 
 class Face_Detect:
-    def __init__(self,in_path,user=f'{randint(0,sys.maxsize)}',cascade_classifier="haarcascade_frontalface_default.xml",out_path="img_cortadas"):
+    def __init__(self,in_path,user=f'{randint(0,sys.maxsize)}',cascade_classifier="modelos/haarcascade_frontalface_default.xml",out_path="img_cortadas"):
         self.__in_path = in_path
         self.out_path = out_path
         self.id = user
