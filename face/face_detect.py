@@ -31,23 +31,8 @@ class Face_Detect:
             cv.imwrite(path, roi_color)
         return path
 
-    def detect_color(self):
-        path = f'..\{self.out_path}\{self.id}.jpg'
-        print(path)
-        image = cv.imread(path)
-        hsv_image = cv.cvtColor(image, cv.COLOR_BGR2HSV)
-        skin_mask = cv.inRange(hsv_image, LOWER_SKIN, UPPER_SKIN)
-        skin_image = cv.bitwise_and(image, image, mask=skin_mask)
-        average_color = np.mean(skin_image, axis=(0, 1))
-        cv.imshow("SKin",skin_image)
-        cv.waitKey(0)
-        cv.destroyAllWindows()
-        print(average_color)
-
-
-
-
+   
     
-    def save():
+    def clear():
         pass
 
