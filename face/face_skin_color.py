@@ -1,6 +1,5 @@
 import numpy as np
 import cv2 as cv
-import matplotlib
 
 class Face_Skin_Color:
     LOWER_SKIN = np.array([0, 40, 30], dtype=np.uint8)
