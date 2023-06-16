@@ -6,9 +6,6 @@ import numpy as np
 import sys
 
 
-LOWER_SKIN = np.array([0, 20, 70], dtype=np.uint8)
-UPPER_SKIN = np.array([20, 255, 255], dtype=np.uint8)
-
 class Face_Detect:
     def __init__(self,in_path,user=f'{randint(0,sys.maxsize)}',cascade_classifier="modelos/haarcascade_frontalface_default.xml",out_path="img_cortadas"):
         self.__in_path = in_path

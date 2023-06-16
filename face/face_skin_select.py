@@ -63,24 +63,5 @@ class Face_Skin_Select_Color:
             print('---')
 
 
-    def mean_color(self):
-        imagem_hsv = self.skin_image
-        mask_preto = cv.inRange(imagem_hsv, (0, 0, 0), (179, 255, 10))
-        pixels_nao_pretos = cv.bitwise_and(imagem_hsv, imagem_hsv, mask=~mask_preto)
-        #tom_medio_hsv = np.mean(pixels_nao_pretos)
-        #tom_medio_hsv = circular_mean(pixels_nao_pretos,axis=(0,1))
-        pixels_rgb = cv.cvtColor(pixels_nao_pretos, cv.COLOR_HSV2RGB)
-        r_mean = np.mean(pixels_rgb[:,0])
-        g_mean = np.mean(pixels_rgb[:,1])
-        b_mean = np.mean(pixels_rgb[:,2])
-        h, s, v = colorsys.rgb_to_hsv(r_mean/255,g_mean/255,b_mean/255)
-        h = int(h * 360)
-        s = int(s * 255)
-        v = int(v * 255)
-        tom_medio_hsv = (h,s,v)
-
-        
-        print("Tom Médio em HSV:", tom_medio_hsv)
-        return tom_medio_hsv
-
+ 
 
