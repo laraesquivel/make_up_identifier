@@ -37,7 +37,7 @@ def processar_conteudo(conteudo):
 
 
 window = tk.Tk()
-window.title("Leitor de Arquivos")
+window.title("Make up Identifier")
 
 botao_selecionar = tk.Button(window, text="Selecionar Arquivo", command=ler_arquivo)
 botao_selecionar.pack(pady=10)
